@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "440098399249",
+    "project_id": "docconnect-dc825",
+    "storage_bucket": "docconnect-dc825.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440098399249:android:e9a57b906cfab9e8cfbdb0",
+        "android_client_info": {
+          "package_name": "com.company.DocConnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmuaplSqSJRmXLajvkB5U0jfpAbVn8Rdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

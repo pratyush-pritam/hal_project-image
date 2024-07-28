@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="./uploads/logos1.png" alt="soalogo">
+    <!-- <img src="./uploads/logoal.png" alt="hallogo"> -->
+    <title>Image Manipulation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #95b7ff, #3fe45b);
+            color: white;
+            padding: 5px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        canvas {
+            border: 1px solid black;
+            background: white;
+            max-width: 100%;
+            height: auto;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Image Manipulation</h1>
+    <input type="file" id="upload" accept="image/*"><br><br>
+    <div class="container">
+        <div>
+            <h1>Original Image</h1>
+            <canvas id="originalCanvas"></canvas>
+        </div>
+        <div>
+            <h1>Edited Image</h1>
+            <canvas id="canvas" onclick="placeText(event)"></canvas>
+        </div>
+    </div>
+    <br>
+    <label for="filter">Choose a filter:</label>
+    <select id="filter" onchange="updateFilter()">
+        <option value="none">None</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="invert">Invert</option>
+        <option value="sepia">Sepia</option>
+        <option value="brightness">Brightness</option>
+        <option value="contrast">Contrast</option>
+        <option value="saturate">Saturate</option>
+        <option value="hue-rotate">Hue Rotate</option>
+    </select><br><br>
+    <label for="scale">Manipulation Scale (1-100):</label>
+    <input type="range" id="scale" name="scale" min="1" max="100" value="50" oninput="applyFilter()"><br>
+    <span id="scaleValue">50</span><br><br>
+    <label for="font">Choose a font:</label>
+    <select id="font">
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+    </select><br><br>
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button><br><br>
+    <button onclick="addText()">Add Text</button>
+    <button onclick="clearText()">Clear Text</button>
+    <button onclick="downloadImage()">Download Image</button> <!-- New download button -->
+
+    <script src="script.js"></script>
+</body>
+</html>
